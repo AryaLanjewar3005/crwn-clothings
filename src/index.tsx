@@ -6,7 +6,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { UserProvider } from './context/user.context';
 import { ProductProvider } from './context/product.context';
-import { CartToggleContextProvider } from './context/cart-toggle.context';
+import { CartProvider } from './context/cart-toggle.context';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,13 +14,13 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <CartToggleContextProvider>
+      <CartProvider>
        <ProductProvider>
         <UserProvider>
             < App />
         </UserProvider>
       </ProductProvider>
-      </CartToggleContextProvider>
+      </CartProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
